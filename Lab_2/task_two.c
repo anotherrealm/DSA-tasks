@@ -18,10 +18,10 @@ typedef struct {
     int currentAge;
     AcademicUnit primaryUnit;
     AssessmentResult overallResult;
-} CampoLearner; // Changed CampusLearner to CampoLearner
+} CampoLearner; // 
 
 typedef struct LearnerEntry {
-    CampoLearner learnerData; // Changed CampusLearner to CampoLearner
+    CampoLearner learnerData; 
     struct LearnerEntry* nextEntry;
 } LearnerEntryNode;
 
@@ -35,7 +35,7 @@ char compute_grade(int inputScore) {
     return 'F';
 }
 
-void add_learner_record(CampoLearner newLearner) { // Changed CampusLearner to CampoLearner
+void add_learner_record(CampoLearner newLearner) { 
     LearnerEntryNode* newNode = (LearnerEntryNode*)malloc(sizeof(LearnerEntryNode));
     newNode->learnerData = newLearner;
     newNode->learnerData.overallResult.assignedGrade = compute_grade(newLearner.overallResult.scoreVal);
